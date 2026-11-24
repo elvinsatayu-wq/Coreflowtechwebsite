@@ -1,0 +1,96 @@
+@import "tailwindcss";
+
+@theme {
+  /* Deep Navy */
+  --color-navy-950: #040c22;
+  --color-navy-900: #0a1a3f;
+  --color-navy-800: #0f2557;
+  --color-navy-700: #163273;
+  --color-navy-600: #22428f;
+
+  /* Tech Blue */
+  --color-brand-700: #0b4fd6;
+  --color-brand-600: #145ff0;
+  --color-brand-500: #1e6bff;
+  --color-brand-400: #4c8cff;
+  --color-brand-300: #8bb5ff;
+  --color-brand-200: #c4d9ff;
+  --color-brand-100: #e4eeff;
+  --color-brand-50: #f3f7ff;
+
+  /* Accent cyan */
+  --color-cyan-tech: #22c3ee;
+
+  --font-sans: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-heading), var(--font-body), ui-sans-serif, sans-serif;
+
+  --animate-fade-up: fade-up 0.7s ease-out both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  /* offset anchor jumps for the sticky navbar */
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-navy-900);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgb(30 107 255 / 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(30 107 255 / 0.07) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.bg-grid-dark {
+  background-image:
+    linear-gradient(to right, rgb(255 255 255 / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(255 255 255 / 0.05) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+.text-gradient {
+  background: linear-gradient(100deg, var(--color-brand-600), var(--color-cyan-tech));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
