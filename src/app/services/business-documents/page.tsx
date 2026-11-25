@@ -154,7 +154,7 @@ export default function BusinessDocumentsPage() {
       {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-b from-brand-50 via-white to-white">
         <div className="bg-grid absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent_80%)]" aria-hidden="true" />
-        <div className="relative mx-auto max-w-7xl px-4 pt-8 pb-20 sm:px-6 lg:px-8">
+        <div className="relative mx-auto max-w-[1440px] px-4 pt-8 pb-20 sm:px-6 lg:px-12">
           <nav className="flex items-center gap-1 text-sm text-navy-700/60" aria-label="breadcrumb">
             <Link href="/" className="hover:text-brand-600">
               หน้าหลัก
@@ -216,13 +216,13 @@ export default function BusinessDocumentsPage() {
 
       {/* Document types */}
       <section className="py-20">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12">
           <SectionHeading
             eyebrow="Documents"
             title="ครบทุกเอกสารที่ธุรกิจต้องใช้"
             description="ข้อมูลไหลต่อเนื่องจากเอกสารหนึ่งไปอีกเอกสารหนึ่ง ไม่ต้องคีย์ซ้ำ"
           />
-          <ol className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+          <ol className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 lg:grid-cols-5 lg:gap-8">
             {docTypes.map(({ icon: Icon, name, en, prefix }, i) => (
               <li
                 key={name}
@@ -249,7 +249,7 @@ export default function BusinessDocumentsPage() {
 
       {/* Benefits */}
       <section className="bg-navy-900 py-20 sm:py-24">
-        <div className="mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+        <div className="mx-auto grid max-w-[1440px] items-center gap-14 px-4 sm:px-6 lg:grid-cols-2 lg:px-12">
           <div>
             <SectionHeading
               dark
@@ -287,9 +287,9 @@ export default function BusinessDocumentsPage() {
 
       {/* More features */}
       <section className="py-20 sm:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12">
           <SectionHeading eyebrow="Features" title="ฟีเจอร์ครบ ใช้งานง่าย" />
-          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
             {moreFeatures.map(({ icon: Icon, title, text }) => (
               <div
                 key={title}

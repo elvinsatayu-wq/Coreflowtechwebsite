@@ -35,7 +35,7 @@ function DbdBadge() {
 export default function Footer() {
   return (
     <footer className="bg-navy-950 text-brand-100/70">
-      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-8">
+      <div className="mx-auto grid max-w-[1440px] gap-10 px-4 py-14 sm:px-6 md:grid-cols-2 lg:grid-cols-4 lg:px-12">
         <div className="lg:col-span-2">
           <Logo dark />
           <p className="mt-4 max-w-sm text-sm leading-relaxed">
@@ -101,7 +101,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 px-4 py-6 text-sm sm:px-6 md:flex-row lg:px-8">
+        <div className="mx-auto flex max-w-[1440px] flex-col items-center justify-between gap-5 px-4 py-6 text-sm sm:px-6 md:flex-row lg:px-12">
           <p className="text-center md:text-left">
             © {site.copyrightYear} {site.legalName}. สงวนลิขสิทธิ์ · {site.domain}
           </p>

@@ -21,7 +21,7 @@ export default function HeroCarousel() {
 
   return (
     <div
-      className="group relative overflow-hidden rounded-2xl bg-brand-50 shadow-[0_30px_80px_-30px_rgb(10_26_63/0.45)] ring-1 ring-navy-900/10 sm:rounded-3xl"
+      className="group relative w-full overflow-hidden bg-brand-50 shadow-[0_30px_80px_-30px_rgb(10_26_63/0.45)]"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       onFocus={() => setPaused(true)}
@@ -42,7 +42,7 @@ export default function HeroCarousel() {
               width={2056}
               height={765}
               priority={i === 0}
-              sizes="(min-width: 1280px) 1216px, 100vw"
+              sizes="100vw"
               className="aspect-[2056/765] h-auto w-full object-cover"
             />
           );

@@ -19,7 +19,7 @@ export default function ContactSection() {
         className="absolute -top-40 -right-40 size-[32rem] rounded-full bg-brand-500/25 blur-3xl"
         aria-hidden="true"
       />
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12">
         <SectionHeading
           dark
           eyebrow="Contact Us"
@@ -27,7 +27,7 @@ export default function ContactSection() {
           description="ปรึกษาฟรี ไม่มีค่าใช้จ่าย ทีมงานพร้อมแนะนำระบบที่เหมาะกับธุรกิจของคุณ"
         />
 
-        <div className="mt-14 grid gap-8 lg:grid-cols-5">
+        <div className="mt-14 grid gap-6 lg:grid-cols-5 lg:gap-8">
           {/* Contact info */}
           <div className="space-y-4 lg:col-span-2">
             {items.map(({ icon: Icon, label, value, href }) => (

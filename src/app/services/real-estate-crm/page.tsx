@@ -99,7 +99,7 @@ export default function RealEstateCrmPage() {
     <>
       <section className="relative overflow-hidden bg-gradient-to-b from-brand-50 via-white to-white">
         <div className="bg-grid absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent_80%)]" aria-hidden="true" />
-        <div className="relative mx-auto max-w-7xl px-4 pt-8 pb-20 sm:px-6 lg:px-8">
+        <div className="relative mx-auto max-w-[1440px] px-4 pt-8 pb-20 sm:px-6 lg:px-12">
           <nav className="flex items-center gap-1 text-sm text-navy-700/60" aria-label="breadcrumb">
             <Link href="/" className="hover:text-brand-600">
               หน้าหลัก
@@ -153,13 +153,13 @@ export default function RealEstateCrmPage() {
       </section>
 
       <section className="py-20 sm:py-24">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12">
           <SectionHeading
             eyebrow="Features"
             title="ทุกเครื่องมือที่ทีมขายอสังหาฯ ต้องการ"
             description="ตั้งแต่ลีดแรกจนถึงวันโอนกรรมสิทธิ์"
           />
-          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
             {features.map(({ icon: Icon, title, text }) => (
               <div
                 key={title}
@@ -177,7 +177,7 @@ export default function RealEstateCrmPage() {
       </section>
 
       <section className="bg-navy-900 py-16">
-        <div className="mx-auto grid max-w-7xl gap-6 px-4 sm:grid-cols-3 sm:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-[1440px] gap-6 px-4 sm:grid-cols-3 lg:gap-8 sm:px-6 lg:px-12">
           {[
             { icon: Smartphone, title: "ใช้ได้บนมือถือ", text: "เซลส์อัปเดตข้อมูลได้ทันทีหน้างาน" },
             { icon: Users, title: "ทำงานเป็นทีม", text: "แบ่งลูกค้าให้เซลส์ กำหนดสิทธิ์ได้" },

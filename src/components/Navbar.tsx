@@ -26,7 +26,7 @@ export default function Navbar() {
           : "border-transparent bg-white/70 backdrop-blur-sm"
       }`}
     >
-      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <nav className="mx-auto flex h-16 max-w-[1440px] items-center justify-between px-4 sm:px-6 lg:px-12">
         <Logo />
 
         <ul className="hidden items-center gap-1 md:flex">
@@ -66,7 +66,7 @@ export default function Navbar() {
 
       {open && (
         <div id="mobile-menu" className="border-t border-navy-900/10 bg-white md:hidden">
-          <ul className="mx-auto max-w-7xl space-y-1 px-4 py-3">
+          <ul className="mx-auto max-w-[1440px] space-y-1 px-4 py-3 sm:px-6">
             {navLinks.map((l) => (
               <li key={l.href}>
                 <Link

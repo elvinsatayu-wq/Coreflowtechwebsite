@@ -69,7 +69,7 @@ export default function Home() {
         <div className="bg-grid absolute inset-0 [mask-image:linear-gradient(to_bottom,black,transparent_75%)]" aria-hidden="true" />
         <div className="absolute -top-32 left-1/2 h-96 w-[56rem] -translate-x-1/2 rounded-full bg-brand-400/20 blur-3xl" aria-hidden="true" />
 
-        <div className="relative mx-auto max-w-7xl px-4 pt-14 pb-16 sm:px-6 sm:pt-20 lg:px-8">
+        <div className="relative mx-auto max-w-[1440px] px-4 pt-14 pb-14 sm:px-6 sm:pt-20 lg:px-12">
           <div className="mx-auto max-w-4xl animate-fade-up text-center">
             <span className="inline-flex items-center gap-2 rounded-full border border-brand-200 bg-white/80 px-4 py-1.5 text-sm font-medium text-brand-700 shadow-sm">
               <span className="size-2 rounded-full bg-cyan-tech" />
@@ -103,16 +103,16 @@ export default function Home() {
               </a>
             </div>
           </div>
+        </div>
 
-          <div className="mt-14 animate-fade-up [animation-delay:150ms]">
-            <HeroCarousel />
-          </div>
+        <div className="relative w-full animate-fade-up pb-16 [animation-delay:150ms]">
+          <HeroCarousel />
         </div>
       </section>
 
       {/* ───────── About ───────── */}
       <section id="about" className="py-20 sm:py-28">
-        <div className="mx-auto grid max-w-7xl items-center gap-14 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
+        <div className="mx-auto grid max-w-[1440px] items-center gap-14 px-4 sm:px-6 lg:grid-cols-2 lg:px-12">
           <div>
             <SectionHeading
               align="left"
@@ -176,14 +176,14 @@ export default function Home() {
 
       {/* ───────── Services & Packages ───────── */}
       <section id="services" className="bg-brand-50/60 py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12">
           <SectionHeading
             eyebrow="Services & Packages"
             title="บริการและแพ็คเกจ"
             description="ระบบสำเร็จรูปพร้อมใช้งาน เลือกให้เหมาะกับธุรกิจของคุณ"
           />
 
-          <div className="mt-14 grid gap-8 lg:grid-cols-2">
+          <div className="mt-14 grid gap-6 lg:grid-cols-2 lg:gap-8">
             {services.map((s, i) => (
               <article
                 key={s.slug}
@@ -195,7 +195,7 @@ export default function Home() {
                       src={s.image}
                       alt={s.name}
                       fill
-                      sizes="(min-width: 1024px) 600px, 100vw"
+                      sizes="(min-width: 1024px) 50vw, 100vw"
                       className="object-cover transition duration-500 group-hover:scale-[1.02]"
                     />
                   ) : (
@@ -250,13 +250,13 @@ export default function Home() {
 
       {/* ───────── Key Features ───────── */}
       <section id="features" className="py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-12">
           <SectionHeading
             eyebrow="Why CoreFlow"
             title="จุดเด่นของเรา"
             description="ทุกระบบของ CoreFlow Tech ถูกออกแบบมาบนพื้นฐาน 3 ข้อนี้"
           />
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
+          <div className="mt-14 grid gap-6 md:grid-cols-3 lg:gap-8">
             {features.map(({ icon: Icon, title, en, text, points }, i) => (
               <div
                 key={title}

@@ -11,8 +11,8 @@ export default function CtaBand({
   subtitle?: React.ReactNode;
 }) {
   return (
-    <section className="px-4 py-16 sm:px-6 lg:px-8">
-      <div className="relative mx-auto max-w-6xl overflow-hidden rounded-3xl bg-gradient-to-br from-brand-600 via-brand-500 to-navy-700 px-6 py-12 text-center shadow-2xl shadow-brand-500/25 sm:px-12">
+    <section className="px-4 py-16 sm:px-6 lg:px-12">
+      <div className="relative mx-auto max-w-[1440px] overflow-hidden rounded-3xl bg-gradient-to-br from-brand-600 via-brand-500 to-navy-700 px-6 py-12 text-center shadow-2xl shadow-brand-500/25 sm:px-12">
         <div className="bg-grid-dark absolute inset-0" aria-hidden="true" />
         <div className="relative">
           <h2 className="text-2xl font-bold text-white sm:text-3xl">{title}</h2>
