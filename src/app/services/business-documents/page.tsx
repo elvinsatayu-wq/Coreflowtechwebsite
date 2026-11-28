@@ -23,7 +23,6 @@ import {
 } from "lucide-react";
 import SectionHeading from "@/components/SectionHeading";
 import CtaBand from "@/components/CtaBand";
-import { LineIcon } from "@/components/BrandIcons";
 import { site } from "@/data/site";
 
 export const metadata: Metadata = {
@@ -189,13 +188,13 @@ export default function BusinessDocumentsPage() {
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
-                  href={site.social.line}
+                  href="https://document.coreflowtech.net"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-500 px-7 py-3.5 font-semibold text-white shadow-xl shadow-brand-500/30 transition hover:bg-brand-600"
                 >
-                  <LineIcon className="size-5" />
-                  ขอทดลองใช้งาน
+                  ทดลองใช้งานฟรี
+                  <ArrowRight className="size-4" />
                 </a>
                 <Link
                   href="/#contact"
@@ -314,7 +313,8 @@ export default function BusinessDocumentsPage() {
             จัดการเอกสารธุรกิจได้อย่างมืออาชีพ ด้วย CoreFlow Tech
           </>
         }
-        subtitle="พร้อมใช้งานทันที — ติดต่อเราเพื่อขอทดลองใช้งานหรือรับใบเสนอราคา"
+        subtitle="พร้อมใช้งานทันที — ทดลองใช้งานฟรี หรือติดต่อเราเพื่อรับใบเสนอราคา"
+        trialHref="https://document.coreflowtech.net"
       />
     </>
   );

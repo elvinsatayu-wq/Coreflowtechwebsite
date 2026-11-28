@@ -6,10 +6,18 @@ import { LineIcon } from "./BrandIcons";
 export default function CtaBand({
   title,
   subtitle,
+  trialHref,
 }: {
   title: React.ReactNode;
   subtitle?: React.ReactNode;
+  /** When set, shows a primary "ทดลองใช้งานฟรี" button linking here. */
+  trialHref?: string;
 }) {
+  const solid =
+    "inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 font-semibold text-navy-900 shadow-lg transition hover:bg-brand-50";
+  const outline =
+    "inline-flex items-center justify-center gap-2 rounded-full border border-white/40 px-7 py-3.5 font-semibold text-white transition hover:bg-white/10";
+
   return (
     <section className="px-4 py-16 sm:px-6 lg:px-12">
       <div className="relative mx-auto max-w-[1440px] overflow-hidden rounded-3xl bg-gradient-to-br from-brand-600 via-brand-500 to-navy-700 px-6 py-12 text-center shadow-2xl shadow-brand-500/25 sm:px-12">
@@ -18,19 +26,22 @@ export default function CtaBand({
           <h2 className="text-2xl font-bold text-white sm:text-3xl">{title}</h2>
           {subtitle && <p className="mx-auto mt-3 max-w-xl text-brand-100">{subtitle}</p>}
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+            {trialHref && (
+              <a href={trialHref} target="_blank" rel="noopener noreferrer" className={solid}>
+                ทดลองใช้งานฟรี
+                <ArrowRight className="size-4" />
+              </a>
+            )}
             <a
               href={site.social.line}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-7 py-3.5 font-semibold text-navy-900 shadow-lg transition hover:bg-brand-50"
+              className={trialHref ? outline : solid}
             >
-              <LineIcon className="size-5 text-[#06C755]" />
+              <LineIcon className={trialHref ? "size-5" : "size-5 text-[#06C755]"} />
               แชทกับเราทาง LINE
             </a>
-            <Link
-              href="/#contact"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/40 px-7 py-3.5 font-semibold text-white transition hover:bg-white/10"
-            >
+            <Link href="/#contact" className={outline}>
               ขอใบเสนอราคา
               <ArrowRight className="size-4" />
             </Link>
